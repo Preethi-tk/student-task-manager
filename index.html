@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Task Manager</h1>
+        <p>Organize your studies. Achieve your goals.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Task Summary -->
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Pending Tasks</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Completed Tasks</h3>
+                <p id="completedTasks">0</p>
+            </div>
+        </section>
+
+        <!-- Add New Task -->
+        <section class="task-form">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Title</label>
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Enter your task"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" required>
+                </div>
+
+                <button type="submit">+ Add Task</button>
+            </form>
+        </section>
+
+        <!-- My Tasks -->
+        <section class="task-list">
+            <h2>My Tasks</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="taskTableBody">
+                        <!-- Tasks will be added using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No tasks yet. Add your first task!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Task Manager | Built by Preethi T.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
